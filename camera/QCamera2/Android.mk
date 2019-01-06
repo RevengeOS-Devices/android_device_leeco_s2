@@ -55,11 +55,13 @@ LOCAL_C_INCLUDES := \
         frameworks/native/libs/nativewindow/include \
         frameworks/native/libs/arect/include \
         frameworks/native/libs/nativebase/include \
+		hardware/qcom/media/msm8952/libstagefrighthw \
         hardware/qcom/media-caf/msm8952/libstagefrighthw \
         system/media/camera/include \
         $(LOCAL_PATH)/../mm-image-codec/qexif \
         $(LOCAL_PATH)/../mm-image-codec/qomx_core \
         $(LOCAL_PATH)/util \
+		hardware/qcom/media/msm8952/mm-core/inc \
         hardware/qcom/media-caf/msm8952/mm-core/inc
 
 #HAL 1.0 Include paths
@@ -89,6 +91,7 @@ endif
 LOCAL_C_INCLUDES += \
         $(TARGET_OUT_HEADERS)/qcom/display
 LOCAL_C_INCLUDES += \
+        hardware/qcom/display/msm8952/libqservice \
         hardware/qcom/display-caf/msm8952/libqservice
 LOCAL_SHARED_LIBRARIES := libcamera_client liblog libhardware libutils libcutils libdl
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libui libcamera_metadata
