@@ -22,6 +22,7 @@ $(call inherit-product, device/leeco/s2/full_s2.mk)
 
 # Inherit some common AOSP stuff.
 $(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/revengeos/config/gsm.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := s2
