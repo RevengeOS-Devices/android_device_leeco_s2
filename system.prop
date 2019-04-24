@@ -228,6 +228,9 @@ ro.audio.flinger_standbytime_ms=300
 ro.min.fling_velocity=160
 ro.max.fling_velocity=20000
 
+# Sim
+persist.vendor.qti.pie.telephony=1
+
 # GCAM Fixes
 camera.HAL3.enabled=1
 persist.camera.eis.enable=1
