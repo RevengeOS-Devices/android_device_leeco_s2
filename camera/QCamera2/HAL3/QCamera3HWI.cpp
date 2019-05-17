@@ -743,7 +743,7 @@ int QCamera3HardwareInterface::validateStreamDimensions(
     * Check if unsupported sizes have been requested on any of them
     */
     for (size_t j = 0; j < streamList->num_streams; j++) {
-        bool sizeFound = false;
+        bool sizeFound = true;
         camera3_stream_t *newStream = streamList->streams[j];
 
         /*
@@ -1049,7 +1049,7 @@ int QCamera3HardwareInterface::configureStreams(
     uint32_t minWidth;
     uint32_t minHeight;
     /*EIS configuration*/
-    bool eisSupported = false;
+    bool eisSupported = true;
     bool oisSupported = false;
     int32_t margin_index = -1;
     uint8_t eis_prop_set;
@@ -1087,7 +1087,7 @@ int QCamera3HardwareInterface::configureStreams(
     /* EIS setprop control */
     char eis_prop[PROPERTY_VALUE_MAX];
     memset(eis_prop, 0, sizeof(eis_prop));
-    property_get("camera.eis.enable", eis_prop, "0");
+    property_get("camera.eis.enable", eis_prop, "1");
     eis_prop_set = (uint8_t)atoi(eis_prop);
 
     m_bEisEnable = eis_prop_set && (!oisSupported && eisSupported);
