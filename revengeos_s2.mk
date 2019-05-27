@@ -24,6 +24,10 @@ $(call inherit-product, device/leeco/s2/full_s2.mk)
 $(call inherit-product, vendor/revengeos/config/common.mk)
 $(call inherit-product, vendor/revengeos/config/gsm.mk)
 
+# Inherit some common AOSP stuff.
+IS_PHONE := true
+TARGET_GAPPS_ARCH := arm64
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := s2
 PRODUCT_NAME := revengeos_s2
@@ -43,12 +47,3 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
 
 # Release name
 PRODUCT_RELEASE_NAME := s2
-
-# Set this flag in build script
-ifeq ($(CURRENT_BUILD_TYPE), gapps)
-	# Use Gapps
-	TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
-	WITH_GAPPS := true
-	TARGET_GAPPS_ARCH := arm64
-	IS_PHONE := true
-endif
