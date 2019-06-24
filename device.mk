@@ -179,6 +179,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     librmnetctl
 
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.msm8952
+
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8952 \
